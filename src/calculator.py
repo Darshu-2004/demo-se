@@ -7,9 +7,11 @@ def add(a, b):
     """Add two numbers together"""
     return a + b
 
+
 def subtract(a, b):
     """Subtract b from a"""
     return a - b
+
 
 def multiply(a, b):
     """Multiply two numbers with input validation and logging."""
@@ -20,6 +22,7 @@ def multiply(a, b):
     result = a * b
     print(f"Result: {result}")
     return result
+
 
 def divide(a, b):
     """Divide a by b with enhanced error handling."""
@@ -33,7 +36,18 @@ def divide(a, b):
     print(f"Result: {result}")
     return result
 
-# TODO: Students can add power, sqrt, etc.
+
+def power(a, b):
+    """Raise a to the power of b"""
+    return a ** b
+
+
+def square_root(a):
+    """Calculate square root of a"""
+    if a < 0:
+        raise ValueError("Cannot calculate square root of negative number")
+    return a ** 0.5
+
 
 if __name__ == "__main__":
     print("🧮 Calculator Module")
@@ -41,3 +55,5 @@ if __name__ == "__main__":
     print(f"5 - 2 = {subtract(5, 2)}")
     print(f"2 × 3 = {multiply(2, 3)}")
     print(f"10 ÷ 2 = {divide(10, 2)}")
+    print(f"2 ^ 3 = {power(2, 3)}")
+    print(f"√9 = {square_root(9)}")
